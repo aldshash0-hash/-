@@ -1,0 +1,24 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signed() { return request.auth != null && request.auth.token.email_verified == true; }
+    function admin() {
+      return signed() && request.auth.token.admin == true && request.auth.token.until > request.time.toMillis();
+    }
+    function video() { return request.resource.contentType.matches('video/.*') && request.resource.size < 2 * 1024 * 1024 * 1024; }
+
+    // فيديوهات الكورسات: للمشترك أو المدير فقط
+    match /videos/{cid}/{file} {
+      allow read: if admin() || (signed() &&
+        firestore.exists(/databases/(default)/documents/enrollments/$(request.auth.uid + "_" + cid)));
+      allow write: if admin() && video();
+      allow delete: if admin();
+    }
+    // فيديوهات الدروس المجانية: لأي طالب مسجّل
+    match /free-videos/{file} {
+      allow read: if signed();
+      allow write: if admin() && video();
+      allow delete: if admin();
+    }
+  }
+}
