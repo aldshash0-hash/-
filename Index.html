@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة العكريشي - تعليمية</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav button {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button.btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button.btn-primary:hover {
+            opacity: 0.9;
+        }
+        .lesson-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>منصة العكريشي التعليمية</h1>
+        <nav>
+            <button onclick="showSection('student')">منصة الطالب</button>
+            <button onclick="showSection('admin')">لوحة المدير</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- قسم الطالب -->
+        <section id="student-section" class="card">
+            <h2>الدروس المتاحة</h2>
+            <div id="lessons-list">
+                <!-- سيتم عرض الدروس هنا ديناميكياً -->
+            </div>
+        </section>
+
+        <!-- قسم المدير -->
+        <section id="admin-section" class="card hidden">
+            <h2>لوحة تحكم المدير - رفع درس جديد</h2>
+            <form id="lesson-form">
+                <label for="lesson-title">عنوان الدرس:</label>
+                <input type="text" id="lesson-title" required>
+
+                <label for="lesson-video">رابط الفيديو (أو مسار الملف):</label>
+                <input type="text" id="lesson-video" placeholder="أدخل رابط أو مسار الفيديو" required>
+
+                <label for="lesson-type">نوع الدرس:</label>
+                <select id="lesson-type" onchange="togglePriceField()">
+                    <option value="free">مجاني</option>
+                    <option value="paid">مدفوع</option>
+                </select>
+
+                <div id="price-container" class="hidden">
+                    <label for="lesson-price">السعر (جنيه):</label>
+                    <input type="number" id="lesson-price" placeholder="أدخل السعر">
+                </div>
+
+                <button type="submit" class="btn-primary">إضافة الدرس</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // تبديل العروض بين الطالب والمدير
+        function showSection(section) {
+            const studentSec = document.getElementById('student-section');
+            const adminSec = document.getElementById('admin-section');
+            if (section === 'student') {
+                studentSec.classList.remove('hidden');
+                adminSec.classList.add('hidden');
+                loadLessons();
+            } else {
+                studentSec.classList.add('hidden');
+                adminSec.classList.remove('hidden');
+            }
+        }
+
+        // إظهار وإخفاء حقل السعر حسب نوع الدرس
+        function togglePriceField() {
+            const type = document.getElementById('lesson-type').value;
+            const priceContainer = document.getElementById('price-container');
+            if (type === 'paid') {
+                priceContainer.classList.remove('hidden');
+            } else {
+                priceContainer.classList.add('hidden');
+            }
+        }
+
+        // حفظ الدرس الجديد محلياً
+        document.getElementById('lesson-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const title = document.getElementById('lesson-title').value;
+            const video = document.getElementById('lesson-video').value;
+            const type = document.getElementById('lesson-type').value;
+            const price = document.getElementById('lesson-price').value;
+
+            const newLesson = {
+                id: Date.now(),
+                title,
+                video,
+                type,
+                price: type === 'paid' ? price : 0
+            };
+
+            let lessons = JSON.parse(localStorage.getItem('local_lessons')) || [];
+            lessons.push(newLesson);
+            localStorage.setItem('local_lessons', JSON.stringify(lessons));
+
+            alert('تم إضافة الدرس بنجاح!');
+            document.getElementById('lesson-form').reset();
+            togglePriceField();
+            showSection('student');
+        });
+
+        // تحميل وعرض الدروس للطالب
+        function loadLessons() {
+            const listContainer = document.getElementById('lessons-list');
+            const lessons = JSON.parse(localStorage.getItem('local_lessons')) || [];
+
+            if (lessons.length === 0) {
+                listContainer.innerHTML = '<p>لا توجد دروس متاحة حالياً.</p>';
+                return;
+            }
+
+            listContainer.innerHTML = '';
+            lessons.forEach(lesson => {
+                const item = document.createElement('div');
+                item.className = 'lesson-item';
+                item.innerHTML = `
+                    <h3>${lesson.title}</h3>
+                    <p>النوع: <strong>${lesson.type === 'free' ? 'مجاني' : 'مدفوع - السعر: ' + lesson.price + ' جنيه'}</strong></p>
+                    <video width="100%" controls style="max-height: 300px; background:#000;">
+                        <source src="${lesson.video}" type="video/mp4">
+                        متصفحك لا يدعم عرض الفيديو.
+                    </video>
+                `;
+                listContainer.appendChild(item);
+            });
+        }
+
+        // تحميل الدروس عند فتح الصفحة لأول مرة
+        window.onload = function() {
+            loadLessons();
+        };
+    </script>
+</body>
+</html>
