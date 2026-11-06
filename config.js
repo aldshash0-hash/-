@@ -1,2 +1,2 @@
-// ضع هنا رابط تطبيق الويب الذي حصلت عليه من Google Apps Script (ينتهي بـ /exec)
+https://script.google.com/macros/s/AKfycbwZGNaNytgew7qGauIOLnFMBcdmrkwyGVzqWEvCiz5OfZCWTSVOyca8QhPST91u301X/exec
 window.AK_API = "";
