@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>العكريشي</title>
+<meta name="description" content="العكريشي: دروس اللغة العربية لكل مرحلة دراسية">
+<meta property="og:title" content="العكريشي"><meta property="og:site_name" content="العكريشي">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f0e1;--card:#fffdf7;--text:#1d2433;--muted:#5d6577;--ink:#1b2b4a;--ink2:#2b4478;--gold:#a87a1e;--goldl:#e8c872;--line:#e4d8bb;--ok:#18794e;--bad:#c62828;--onink:#fbf3dc}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1424;--card:#161e36;--text:#efe9d8;--muted:#a9b0c4;--ink:#0a1020;--ink2:#1d2c58;--gold:#e0b64f;--goldl:#f2d98d;--line:#2a3558;--ok:#5ad19a;--bad:#ff8a80}body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 5l6 15 15-6-6 15 15 6-15 6 6 15-15-6-6 15-6-15-15 6 6-15-15-6 15-6-6-15 15 6z' fill='none' stroke='%23e0b64f' stroke-opacity='.12' stroke-width='1.2'/%3E%3C/svg%3E")}}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);font-family:"Cairo","Segoe UI",Tahoma,sans-serif;line-height:1.9;background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 5l6 15 15-6-6 15 15 6-15 6 6 15-15-6-6 15-6-15-15 6 6-15-15-6 15-6-6-15 15 6z' fill='none' stroke='%23a87a1e' stroke-opacity='.16' stroke-width='1.2'/%3E%3C/svg%3E")}
+.cal,h1,h2{font-family:"Aref Ruqaa","Amiri",serif}h3,.un{font-family:"Amiri",serif}
+header{position:sticky;top:0;z-index:5;background:var(--ink);border-bottom:3px double var(--gold)}
+.bar{max-width:980px;margin:auto;display:flex;align-items:center;gap:8px;padding:6px 14px}
+.logo{font-family:"Aref Ruqaa",serif;font-size:2.1rem;font-weight:700;color:var(--goldl);margin-inline-end:auto;line-height:1.4;text-shadow:0 2px 0 rgba(0,0,0,.3)}
+main{max-width:980px;margin:auto;padding:16px;min-height:70vh}
+.btn,.chip{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--text);padding:6px 16px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block;white-space:nowrap}
+header .btn{background:transparent;color:var(--onink);border-color:rgba(232,200,114,.5)}
+.btn.p,.chip.on{background:var(--ink);color:var(--goldl);border-color:var(--gold)}.btn.a{background:var(--gold);color:#fff;border-color:var(--gold)}.btn.d{color:var(--bad);border-color:var(--bad)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{position:relative;overflow:hidden;text-align:center;color:var(--onink);border-radius:18px;padding:34px 18px 30px;margin-bottom:18px;border:2px solid var(--gold);box-shadow:0 0 0 5px var(--ink),0 0 0 6px var(--gold);background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cpath d='M32 5l6 15 15-6-6 15 15 6-15 6 6 15-15-6-6 15-6-15-15 6 6-15-15-6 15-6-6-15 15 6z' fill='none' stroke='%23e8c872' stroke-opacity='.22' stroke-width='1.2'/%3E%3C/svg%3E"),linear-gradient(160deg,var(--ink),var(--ink2))}
+.hero::before,.hero::after{position:absolute;font-family:"Aref Ruqaa",serif;color:var(--goldl);opacity:.13;pointer-events:none;line-height:1}
+.hero::before{content:"ع";font-size:15rem;left:-18px;bottom:-70px}.hero::after{content:"ض";font-size:11rem;right:-10px;top:-40px}
+.hero h1{position:relative;margin:0;font-size:clamp(2.8rem,12vw,5rem);color:var(--goldl);text-shadow:0 3px 0 rgba(0,0,0,.35);line-height:1.5}
+.hero p{position:relative;margin:2px 0 0;font-family:"Amiri",serif;font-size:1.35rem;opacity:.95}
+.orn{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);margin:10px 0}.orn::before,.orn::after{content:"";height:2px;width:60px;background:linear-gradient(90deg,transparent,var(--gold))}.orn::after{transform:scaleX(-1)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 2px 0 var(--line)}
+.grid .card{margin:0}.crs{display:flex;gap:14px;align-items:flex-start;border-top:3px solid var(--gold)}
+.ini{flex:none;width:68px;height:68px;display:grid;place-items:center;background:var(--ink);color:var(--goldl);font-family:"Aref Ruqaa",serif;font-size:2.3rem;line-height:1;clip-path:polygon(50% 0%,61% 20%,85% 15%,80% 39%,100% 50%,80% 61%,85% 85%,61% 80%,50% 100%,39% 80%,15% 85%,20% 61%,0% 50%,20% 39%,15% 15%,39% 20%)}
+.card h3{margin:0 0 2px;font-size:1.35rem;color:var(--ink)}@media (prefers-color-scheme:dark){.card h3{color:var(--goldl)}}
+.muted{color:var(--muted);font-size:.92rem}.price{font-weight:700;color:var(--gold);font-size:1.15rem}.ok{color:var(--ok);font-weight:600}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}.un{color:var(--gold);margin:20px 0 8px;font-size:1.5rem;font-weight:700}.un::before{content:"❖ "}
+.ls{display:flex;gap:10px;align-items:center;padding:10px 0;border-top:1px dashed var(--line);cursor:pointer}.ls:first-child{border-top:0}.ls.lk{cursor:default;color:var(--muted)}
+.dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-size:.7rem;flex:none}.dot.d{background:var(--ok);border-color:var(--ok);color:#fff}
+.tag{font-size:.75rem;background:var(--gold);color:#fff;border-radius:6px;padding:0 8px}
+.vid{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;margin-bottom:12px;border:2px solid var(--gold)}.vid iframe,.vid video{position:absolute;inset:0;width:100%;height:100%;border:0}
+input,select,textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:5px 0}input[type=radio],input[type=checkbox]{width:auto;margin:0 0 0 8px}
+label{font-size:.92rem;color:var(--muted)}label.o{display:block;color:var(--text);padding:4px 0}.q{border-top:1px dashed var(--line);padding:10px 0}.q.w b{color:var(--bad)}
+.code{font-size:1.6rem;font-weight:700;letter-spacing:2px;color:var(--gold);direction:ltr;text-align:center;background:var(--bg);border:1px dashed var(--gold);border-radius:10px;padding:6px;margin:6px 0}
+.pay ol{padding-inline-start:20px}.pay li{margin-bottom:10px}.auth{max-width:440px;margin:24px auto}.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px}
+.prog{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--gold);width:0}.cd{direction:ltr;font-weight:700;letter-spacing:1px;color:var(--gold)}
+#toast{position:fixed;bottom:20px;inset-inline:16px;margin:auto;max-width:440px;background:var(--ink);color:var(--onink);border:1px solid var(--gold);padding:10px 16px;border-radius:10px;text-align:center;z-index:30}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:16px;z-index:20}#modal .card{max-width:520px;margin:0}
+footer{text-align:center;color:var(--muted);padding:22px;font-size:.88rem}footer a{color:var(--muted);margin:0 8px;cursor:pointer;text-decoration:underline}[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="logo" id="logo">العكريشي</div><span id="nav"></span></div></header>
+<main id="app"><div class="card muted">جارٍ التحميل…</div></main>
+<footer><a data-leg="terms">شروط الاستخدام</a><a data-leg="privacy">الخصوصية</a><a data-leg="refund">الاسترجاع</a><a id="wa" target="_blank" rel="noopener">تواصل واتساب</a><a id="adl">دخول المدير</a></footer>
+<div id="modal" hidden></div><div id="toast" hidden></div>
+<script>
+/*C*/
+const enc=new TextEncoder(),dec=new TextDecoder();
+const b64=u=>{const a=new Uint8Array(u);let s="";for(let i=0;i<a.length;i+=32768)s+=String.fromCharCode.apply(null,a.subarray(i,i+32768));return btoa(s)};
+const ub=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const kdf=async(sec,salt,it)=>crypto.subtle.deriveKey({name:"PBKDF2",salt,iterations:it||150000,hash:"SHA-256"},await crypto.subtle.importKey("raw",enc.encode(sec),"PBKDF2",false,["deriveKey"]),{name:"AES-GCM",length:256},false,["encrypt","decrypt"]);
+const seal=async(k,b)=>{const iv=crypto.getRandomValues(new Uint8Array(12));return{iv:b64(iv),ct:b64(await crypto.subtle.encrypt({name:"AES-GCM",iv},k,b))}};
+const unseal=async(k,o)=>new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM",iv:ub(o.iv)},k,ub(o.ct)));
+const AL="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",rid=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),x=>AL[x%32]).join("");
+function parseQ(t){const items=[],err=[];String(t||"").split("\n").forEach((s,i)=>{s=s.trim();if(!s)return;const p=s.split("|").map(x=>x.trim()),o=p.slice(1,-1),n=parseInt(p[p.length-1]);if(p.length<4||o.some(x=>!x)||!(n>=1&&n<=o.length)){err.push(i+1);return}items.push({q:p[0],o,a:n-1})});return{items,err}}
+const ckey=async(c,use)=>{if(!c.ck)c.ck=b64(crypto.getRandomValues(new Uint8Array(32)));return crypto.subtle.importKey("raw",ub(c.ck),"AES-GCM",false,use)};
+async function encBytes(c,buf){const k=await ckey(c,["encrypt"]),iv=crypto.getRandomValues(new Uint8Array(12)),ct=new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM",iv},k,buf)),o=new Uint8Array(12+ct.length);o.set(iv);o.set(ct,12);return o}
+async function build(S){const out={settings:S.settings,courses:[]};
+for(const c of S.courses){const L=c.lessons.map((l,i)=>({id:l.id,title:l.title,unit:l.unit||"",video:l.video||"",pdf:l.pdf||"",vf:l.vf||"",vm:l.vm||"",pf:l.pf||"",quiz:parseQ(l.quiz).items,n:i}));
+const free=[],lk=[];c.lessons.forEach((l,i)=>(l.free?free:lk).push(L[i]));
+const o={id:c.id,title:c.title,grade:c.grade,price:c.price,desc:c.desc,free,outline:lk.map(l=>({id:l.id,t:l.title,u:l.unit,n:l.n})),locked:null,wraps:[]};
+if(lk.length){const ck=await ckey(c,["encrypt"]);o.locked=await seal(ck,enc.encode(JSON.stringify(lk)));const raw=ub(c.ck);for(const k of c.codes||[]){const salt=crypto.getRandomValues(new Uint8Array(16));o.wraps.push({id:k.id,salt:b64(salt),...await seal(await kdf(k.secret,salt),raw)})}}
+out.courses.push(o)}return out}
+/*E*/
+const GR=["الأول الإعدادي","الثاني الإعدادي","الثالث الإعدادي","الأول الثانوي","الثاني الثانوي","الثالث الثانوي"];
+const $=s=>document.querySelector(s),app=$("#app"),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LS={g(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const dig=s=>String(s||"").replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d));
+const toast=t=>{const e=$("#toast");e.textContent=t;e.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>e.hidden=true,6000)};
+let D={settings:{},courses:[]},ST={},codes=LS.g("ak_codes",{}),sc=LS.g("ak_scores",{}),opened={},keys={},grade="الكل",adminOn=false;
+/*U*/
+async function unlock(c,code){code=String(code).toUpperCase().replace(/[^A-Z0-9]/g,"");const id=code.slice(0,4),sec=code.slice(4),w=(c.wraps||[]).find(x=>x.id==id);if(!w||sec.length<8)return false;
+try{const raw=await unseal(await kdf(sec,ub(w.salt)),w),ck=await crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]);
+keys[c.id]=ck;opened[c.id]=c.locked?JSON.parse(dec.decode(await unseal(ck,c.locked))):[];codes[c.id]=code;LS.s("ak_codes",codes);return true}catch(e){return false}}
+async function fdec(cid,url){const r=await fetch(url);if(!r.ok)throw 0;const ab=new Uint8Array(await r.arrayBuffer());return new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM",iv:ab.slice(0,12)},keys[cid],ab.slice(12)))}
+/*V*/
+const all=c=>[...(c.free||[]),...(opened[c.id]||[])].sort((a,b)=>a.n-b.n);
+const ini=t=>esc(String(t||"ع").trim().replace(/^ال/,"")[0]||"ع");
+function home(){const L=D.courses.filter(c=>grade=="الكل"||c.grade==grade);
+app.innerHTML=`<div class="hero"><h1>${esc(ST.name||"العكريشي")}</h1><p>${esc(ST.tag||"")}</p></div><h2 class="cal orn" style="font-size:1.8rem;margin:6px 0">الكورسات</h2><div class="chips">${["الكل",...GR].map(g=>`<button class="chip ${g==grade?"on":""}" data-a="g|${g}">${g}</button>`).join("")}</div>
+${L.length?`<div class="grid">${L.map(c=>`<div class="card crs"><div class="ini">${ini(c.title)}</div><div style="flex:1"><div class="muted">${esc(c.grade)}</div><h3>${esc(c.title)}</h3><div class="muted">${esc(c.desc)}</div><div class="row">${opened[c.id]?`<span class="ok">🔓 مفعّل</span>`:`<span class="price">${c.price} جنيه</span>`}<button class="btn p" data-a="c|${c.id}">فتح</button></div></div></div>`).join("")}</div>`:`<div class="card muted">لا توجد كورسات بعد.</div>`}`}
+function course(id){const c=D.courses.find(x=>x.id==id),ok=!!opened[id];
+const items=ok?all(c):[...(c.free||[]),...(c.outline||[]).map(o=>({id:o.id,title:o.t,unit:o.u,n:o.n,lock:1}))].sort((a,b)=>a.n-b.n);
+const wa=`https://wa.me/${ST.wa||""}?text=${encodeURIComponent(`مرحبًا، حوّلت ${c.price} جنيه للاشتراك في كورس: ${c.title}`)}`,U=[...new Set(items.map(l=>l.unit||"الدروس"))];
+app.innerHTML=`<button class="btn" data-a="h">رجوع</button><div class="card crs" style="margin-top:10px"><div class="ini">${ini(c.title)}</div><div style="flex:1"><div class="muted">${esc(c.grade)}</div><h2 style="margin:0">${esc(c.title)}</h2><p>${esc(c.desc)}</p>
+${ok?`<span class="ok">🔓 الكورس مفعّل</span>`:`<div class="pay"><span class="price">${c.price} جنيه</span><ol><li>حوّل المبلغ إلى الرقم:<div class="code">${esc(ST.pay)}</div><button class="btn" data-a="cp">نسخ الرقم</button></li><li>أرسل صورة التحويل على واتساب: <a class="btn a" href="${wa}" target="_blank" rel="noopener">إرسال على واتساب</a></li><li>سيصلك كود التفعيل، اكتبه هنا:</li></ol><input id="cd" dir="ltr" placeholder="XXXX-XXXXXXXX" autocomplete="off"><div class="row"><button class="btn p" data-a="act|${id}">تفعيل</button></div></div>`}</div></div>
+${items.length?U.map(u=>`<h3 class="un">${esc(u)}</h3><div class="card">${items.filter(l=>(l.unit||"الدروس")==u).map(l=>l.lock?`<div class="ls lk"><span class="dot">🔒</span><span>${esc(l.title)}</span></div>`:`<div class="ls" data-a="l|${id}|${l.id}"><span class="dot ${sc[l.id]?"d":""}">${sc[l.id]?"✓":""}</span><span>${esc(l.title)}</span>${!ok?`<span class="tag">مجاني</span>`:""}${sc[l.id]?`<span class="muted" style="margin-inline-start:auto">${sc[l.id].score}/${sc[l.id].total}</span>`:""}</div>`).join("")}</div>`).join(""):`<div class="card muted">لا توجد دروس بعد.</div>`}`}
+function lesson(cid,lid){const l=all(D.courses.find(x=>x.id==cid)).find(x=>x.id==lid),m=(l.video||"").match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/),http=u=>/^https?:\/\//i.test(u||""),encV=/\.bin$/.test(l.vf||""),encP=/\.bin$/.test(l.pf||"");
+app.innerHTML=`<button class="btn" data-a="c|${cid}">رجوع</button><div class="card" style="margin-top:10px"><h2 style="margin:0 0 10px">${esc(l.title)}</h2>
+${l.vf?(encV?`<div class="vid"><video id="pv" controls playsinline></video></div><div class="row"><button class="btn p" data-a="pv|${cid}|${lid}">▶ تحميل الفيديو وتشغيله</button><span class="muted">قد يستغرق التحميل حسب الحجم</span></div>`:`<div class="vid"><video controls playsinline preload="metadata" src="${esc(l.vf)}"></video></div>`):""}
+${m?`<div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/${m[1]}?rel=0" allowfullscreen loading="lazy" title="${esc(l.title)}"></iframe></div>`:http(l.video)&&!l.vf?`<a class="btn p" href="${esc(l.video)}" target="_blank" rel="noopener">شاهد الفيديو</a>`:""}
+${l.pf?(encP?`<div class="row" id="pdfl"><button class="btn" data-a="pp|${cid}|${lid}">📄 تحميل الملزمة</button></div>`:`<div class="row"><a class="btn" href="${esc(l.pf)}" target="_blank" rel="noopener">📄 ملزمة الدرس</a></div>`):http(l.pdf)?`<div class="row"><a class="btn" href="${esc(l.pdf)}" target="_blank" rel="noopener">📄 ملزمة الدرس</a></div>`:""}</div>
+${(l.quiz||[]).length?`<div class="card"><h3>اختبار الدرس</h3>${l.quiz.map((x,i)=>`<div class="q" id="q${i}"><b>${i+1}. ${esc(x.q)}</b>${x.o.map((o,j)=>`<label class="o"><input type="radio" name="q${i}" value="${j}">${esc(o)}</label>`).join("")}</div>`).join("")}<div class="row"><button class="btn p" data-a="sub|${cid}|${lid}">تسليم الإجابات</button><b id="rs" class="ok"></b></div></div>`:""}`}
+function submit(cid,lid){const l=all(D.courses.find(x=>x.id==cid)).find(x=>x.id==lid),a=l.quiz.map((_,i)=>{const r=document.querySelector(`input[name=q${i}]:checked`);return r?+r.value:-1});
+if(a.includes(-1))return toast("أجب عن كل الأسئلة أولًا");const w=a.map((v,i)=>v==l.quiz[i].a?-1:i).filter(i=>i>=0),s=a.length-w.length;
+sc[lid]={score:s,total:a.length,at:Date.now(),title:l.title};LS.s("ak_scores",sc);l.quiz.forEach((_,i)=>$("#q"+i).classList.toggle("w",w.includes(i)));$("#rs").textContent=`نتيجتك ${s} من ${a.length}${w.length?" — الأسئلة الخاطئة بالأحمر":" 🌟"}`}
+async function playV(cid,lid){const l=all(D.courses.find(x=>x.id==cid)).find(x=>x.id==lid);toast("جارٍ تحميل الفيديو…");try{const b=await fdec(cid,l.vf),v=$("#pv");v.src=URL.createObjectURL(new Blob([b],{type:l.vm||"video/mp4"}));v.play().catch(()=>{});toast("جاهز ✓")}catch(e){toast("تعذّر تحميل الفيديو. إن رُفع حديثًا فانتظر دقيقة ثم أعد المحاولة")}}
+async function openP(cid,lid){const l=all(D.courses.find(x=>x.id==cid)).find(x=>x.id==lid);toast("جارٍ تحميل الملزمة…");try{const b=await fdec(cid,l.pf);$("#pdfl").innerHTML=`<a class="btn p" target="_blank" rel="noopener" href="${URL.createObjectURL(new Blob([b],{type:"application/pdf"}))}">فتح الملزمة</a>`;toast("جاهزة ✓")}catch(e){toast("تعذّر تحميل الملزمة")}}
+function results(){const R=Object.values(sc).sort((a,b)=>b.at-a.at);app.innerHTML=`<h2 class="cal orn" style="font-size:1.8rem">نتائجي</h2>${R.length?`<div class="card">${R.map(r=>`<div class="ls" style="cursor:default"><span>${esc(r.title)}</span><b style="margin-inline-start:auto">${r.score}/${r.total}</b></div>`).join("")}</div><p class="muted">النتائج محفوظة على هذا الجهاز.</p>`:`<div class="card muted">لم تحل أي اختبار بعد.</div>`}`}
+async function activate(id){const c=D.courses.find(x=>x.id==id);toast("جارٍ التحقق…");if(await unlock(c,dig($("#cd").value))){toast("تم تفعيل الكورس ✓");course(id)}else toast("الكود غير صحيح")}
+async function copyNum(){try{await navigator.clipboard.writeText(ST.pay);toast("تم نسخ الرقم")}catch(e){toast("انسخ الرقم يدويًا: "+ST.pay)}}
+function nav(){$("#nav").innerHTML=`<button class="btn" data-a="r">نتائجي</button>${adminOn?`<button class="btn" data-a="adm">لوحة المدير</button>`:""}`}
+function brand(){$("#logo").textContent=ST.name||"العكريشي";$("#wa").href="https://wa.me/"+(ST.wa||"");document.title=ST.name||"العكريشي"}
+/* ===== المدير عبر GitHub ===== */
+let GH={o:"",r:"",t:""},SRC=null,PW="",pend={},tab="c",sel="",ed=null;
+const gh=(p,opt)=>{opt=opt||{};return fetch(`https://api.github.com/repos/${GH.o}/${GH.r}/${p}`,{...opt,headers:{Authorization:"Bearer "+GH.t,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28",...(opt.headers||{})}})};
+const ghErr=async r=>{let m="";try{m=(await r.json()).message}catch(e){}return new Error(r.status==401?"الرمز (token) غير صحيح أو منتهي":r.status==403||r.status==404?"لا صلاحية أو المستودع غير موجود: "+(m||r.status):"GitHub: "+(m||r.status))};
+async function sha(path){const r=await gh("contents/"+path);if(r.status==404)return null;if(!r.ok)throw await ghErr(r);return(await r.json()).sha}
+async function put(path,b,msg){const s=await sha(path),r=await gh("contents/"+path,{method:"PUT",body:JSON.stringify({message:msg,content:b,...(s?{sha:s}:{})})});if(!r.ok)throw await ghErr(r)}
+async function del(path){try{const s=await sha(path);if(s)await gh("contents/"+path,{method:"DELETE",body:JSON.stringify({message:"delete",sha:s})})}catch(e){}}
+async function getRaw(path){const r=await gh("contents/"+path,{headers:{Accept:"application/vnd.github.raw+json"}});if(r.status==404)return null;if(!r.ok)throw await ghErr(r);return r.arrayBuffer()}
+const blob64=b=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(",")[1]);r.onerror=rej;r.readAsDataURL(b)});
+const v=id=>$("#"+id).value,cur=()=>SRC.courses.find(c=>c.id==sel);
+const detect=()=>{const h=location.hostname;if(!h.endsWith(".github.io"))return "";const s=location.pathname.split("/")[1];return h.split(".")[0]+"/"+(s&&!s.includes(".")?s:h)};
+const defSRC=()=>({settings:JSON.parse(JSON.stringify(D.settings||{})),courses:[],trash:[]});
+function loginView(){const sv=LS.g("ak_gh",{});app.innerHTML=`<div class="card auth"><h2 class="cal">دخول المدير</h2><label>المستودع (المستخدم/الاسم)</label><input id="ar" dir="ltr" value="${esc(sv.rp||detect())}"><label>رمز GitHub (Token)</label><input id="at" type="password" dir="ltr" value="${esc(sv.t||"")}" autocomplete="off"><label>كلمة سر المدير (12 حرفًا على الأقل)</label><input id="ap" type="password" dir="ltr" autocomplete="off"><label>تأكيد كلمة السر (أول مرة فقط)</label><input id="ap2" type="password" dir="ltr" autocomplete="off"><label><input type="checkbox" id="rm" ${sv.t?"checked":""}>تذكّر الرمز على هذا الجهاز</label><div class="row"><button class="btn p" data-a="enter">دخول</button></div></div>`}
+async function enter(b){const rp=v("ar").trim(),[o,r]=rp.split("/");GH={o,r,t:v("at").trim()};PW=v("ap");if(!o||!r||!GH.t||!PW)return toast("املأ الحقول المطلوبة");b.disabled=true;
+try{const rr=await gh("");if(!rr.ok)throw await ghErr(rr);const j=await rr.json();if(!j.permissions||!j.permissions.push)throw new Error("الرمز لا يملك صلاحية الكتابة (Contents: Read and write)");
+const raw=await getRaw("source.enc");
+if(raw){const f=JSON.parse(dec.decode(raw));try{SRC=JSON.parse(dec.decode(await unseal(await kdf(PW,ub(f.salt),300000),f)))}catch(e){throw new Error("كلمة سر المدير غير صحيحة")}}
+else{if(PW.length<12)throw new Error("اختر كلمة سر من 12 حرفًا على الأقل، فالموقع عام وتُحفظ بيانات المدير مشفّرة بها");if(PW!==v("ap2"))throw new Error("كلمتا السر غير متطابقتين");SRC=defSRC()}
+SRC.trash=SRC.trash||[];LS.s("ak_gh",$("#rm").checked?{rp,t:GH.t}:{});adminOn=true;nav();toast("أهلًا بك أيها المدير");aview()}catch(e){toast(e.message);b.disabled=false}}
+const selc=()=>`<div class="card"><div class="row"><select id="sc" style="flex:1">${SRC.courses.map(x=>`<option value="${x.id}" ${x.id==sel?"selected":""}>${esc(x.title)}</option>`).join("")}</select>${tab=="c"?`<button class="btn p" data-a="nc">+ كورس جديد</button>`:""}</div></div>`;
+function aview(){if(!cur())sel=(SRC.courses[0]||{}).id||"";const c=cur(),T=[["c","الكورسات والدروس"],["k","أكواد التفعيل"],["s","الإعدادات"],["p","النشر"]],np=Object.keys(pend).length;
+let h=`<div class="tabs">${T.map(([k,n])=>`<button class="btn ${k==tab?"p":""}" data-a="t|${k}">${n}</button>`).join("")}</div>`;
+if(tab=="c"){const l=ed!=null?c.lessons[ed]:{};h+=selc()+(c?`<div class="card"><h3>بيانات الكورس</h3><label>العنوان</label><input id="ct" value="${esc(c.title)}"><label>المرحلة</label><select id="cg">${GR.map(g=>`<option ${g==c.grade?"selected":""}>${g}</option>`).join("")}</select><label>السعر (جنيه)</label><input id="cp" type="number" value="${c.price}"><label>الوصف</label><textarea id="cd" rows="2">${esc(c.desc)}</textarea><div class="row"><button class="btn p" data-a="saveC">حفظ</button><button class="btn d" data-a="delC">حذف الكورس</button></div></div>
+<div class="card"><h3>${ed!=null?"تعديل درس":"درس جديد"}</h3><label>عنوان الدرس</label><input id="lt" value="${esc(l.title)}"><label>الوحدة</label><input id="lu" value="${esc(l.unit)}">
+<label>فيديو من الهاتف أو الجهاز (حتى 50 ميجا)</label><input type="file" id="lvf" accept="video/*">${l.vf?`<div class="muted">✓ مرفوع: ${esc(l.vn||l.vf)} <label><input type="checkbox" id="lrv">إزالة</label></div>`:""}
+<label>أو رابط فيديو (يوتيوب)</label><input id="lv" dir="ltr" value="${esc(l.video)}"><label>ملزمة PDF من الجهاز</label><input type="file" id="lpf" accept="application/pdf">${l.pf?`<div class="muted">✓ مرفوعة: ${esc(l.pn||l.pf)} <label><input type="checkbox" id="lrp">إزالة</label></div>`:""}
+<label><input type="checkbox" id="lf" ${l.free?"checked":""}>درس مجاني (يراه الجميع بلا كود)</label><br><label>الأسئلة: سطر لكل سؤال: السؤال | خيار | خيار | خيار | رقم الصحيح</label><textarea id="lq" rows="4">${esc(l.quiz)}</textarea>
+<div class="row"><button class="btn p" data-a="saveL">حفظ الدرس</button>${ed!=null?`<button class="btn" data-a="canL">إلغاء</button>`:""}</div><p class="muted">الحفظ هنا محلي. اذهب إلى تبويب «النشر» لرفع كل التعديلات إلى الموقع.</p></div>
+${c.lessons.map((x,i)=>`<div class="card"><b>${esc(x.title)}</b> <span class="muted">${esc(x.unit||"")}${x.free?" · مجاني":""}${x.vf?" · 🎬":""}${x.pf?" · 📄":""}${pend[x.id]?" · ⏳ بانتظار الرفع":""}</span><div class="row"><button class="btn" data-a="mv|${i}|-1">↑</button><button class="btn" data-a="mv|${i}|1">↓</button><button class="btn" data-a="edL|${i}">تعديل</button><button class="btn d" data-a="delL|${i}">حذف</button></div></div>`).join("")}`:`<div class="card muted">أنشئ كورسًا أولًا.</div>`)}
+if(tab=="k")h+=selc()+(c?`<div class="card"><h3>إنشاء أكواد</h3><label>اسم الطالب أو ملاحظة</label><input id="kl"><label>العدد</label><input id="kn" type="number" value="1" min="1" max="50"><button class="btn p" data-a="gen">إنشاء</button></div>${(c.codes||[]).map((k,i)=>`<div class="card"><span class="cd">${k.id}-${k.secret}</span> <span class="muted">${esc(k.label)}</span><div class="row"><button class="btn" data-a="cpk|${i}">نسخ رسالة للطالب</button><button class="btn d" data-a="rmk|${i}">حذف</button></div></div>`).join("")}<p class="muted">الأكواد الجديدة لا تعمل للطلاب إلا بعد «النشر».</p>`:`<div class="card muted">أنشئ كورسًا أولًا.</div>`);
+if(tab=="s"){const t=SRC.settings,g=t.legal||{};h+=`<div class="card"><label>اسم المنصة</label><input id="sn" value="${esc(t.name)}"><label>جملة تعريفية</label><input id="st" value="${esc(t.tag)}"><label>رقم التحويل</label><input id="sp" dir="ltr" value="${esc(t.pay)}"><label>واتساب (بالصيغة الدولية 20...)</label><input id="sw" dir="ltr" value="${esc(t.wa)}"><label>شروط الاستخدام</label><textarea id="s1" rows="3">${esc(g.terms)}</textarea><label>الخصوصية</label><textarea id="s2" rows="3">${esc(g.privacy)}</textarea><label>الاسترجاع</label><textarea id="s3" rows="3">${esc(g.refund)}</textarea><button class="btn p" data-a="saveS">حفظ</button></div>`}
+if(tab=="p")h+=`<div class="card"><h3>نشر التعديلات على الموقع</h3><p>ملفات بانتظار الرفع: <b>${np}</b>. يرفع الزر كل الكورسات والدروس والفيديوهات إلى مستودعك على GitHub، وتظهر للطلاب بعد نحو دقيقة إلى دقيقتين.</p><div class="prog" id="pg"><i id="pgi"></i></div><div class="muted" id="plog"></div><div class="row"><button class="btn a" data-a="pub">🚀 نشر الآن</button><button class="btn" data-a="out">خروج المدير</button></div></div>`;
+app.innerHTML=h;if($("#sc"))$("#sc").onchange=e=>{sel=e.target.value;ed=null;aview()}}
+function trash(l){["vf","pf"].forEach(k=>{if(l[k])SRC.trash.push(l[k])})}
+const safe=n=>String(n).replace(/[^\w.-]/g,"_").slice(-40);
+async function publish(){const log=m=>$("#plog").textContent=m,prog=x=>$("#pgi").style.width=x+"%";
+for(const c of SRC.courses)for(const l of c.lessons){if(parseQ(l.quiz).err.length)throw new Error("أسئلة خاطئة الصيغة في درس «"+l.title+"»");
+for(const[k,e]of[["vf","venc"],["pf","penc"]]){const p=pend[l.id]&&pend[l.id][k=="vf"?"v":"p"];if(l[k]&&!p&&!!l[e]===!!l.free){SRC.trash.push(l[k]);l[k]="";l[e]=false;toast("غُيّرت حالة «مجاني» لدرس «"+l.title+"»، أعد رفع ملفاته")}}}
+const jobs=[];for(const c of SRC.courses)for(const l of c.lessons){const p=pend[l.id];if(p){if(p.v)jobs.push([c,l,"v",p.v]);if(p.p)jobs.push([c,l,"p",p.p])}}
+let n=0;for(const[c,l,k,f]of jobs){log(`جارٍ رفع ${f.name} (${++n}/${jobs.length})…`);prog(100*(n-1)/(jobs.length+2));const buf=new Uint8Array(await f.arrayBuffer()),bytes=l.free?buf:await encBytes(c,buf),path="videos/"+l.id+"-"+rid(4).toLowerCase()+(l.free?"-"+safe(f.name):".bin");
+await put(path,await blob64(new Blob([bytes])),"upload");const F=k=="v"?"vf":"pf";if(l[F])SRC.trash.push(l[F]);l[F]=path;if(k=="v"){l.vm=f.type||"video/mp4";l.vn=f.name;l.venc=!l.free}else{l.pn=f.name;l.penc=!l.free}delete pend[l.id][k];if(!Object.keys(pend[l.id]).length)delete pend[l.id]}
+log("جارٍ حفظ البيانات…");prog(100*(jobs.length+1)/(jobs.length+2));const out=await build(SRC),trashed=[...new Set(SRC.trash)];SRC.trash=[];
+const salt=crypto.getRandomValues(new Uint8Array(16)),sb=await seal(await kdf(PW,salt,300000),enc.encode(JSON.stringify(SRC)));
+await put("source.enc",b64(enc.encode(JSON.stringify({salt:b64(salt),...sb}))),"source");await put("data.json",b64(enc.encode(JSON.stringify(out))),"publish");
+for(const t of trashed)await del(t);prog(100);log("تم النشر ✓ ستظهر التعديلات للطلاب خلال دقيقة إلى دقيقتين.")}
+const ask=m=>new Promise(r=>{const d=$("#modal");d.innerHTML=`<div class="card"><p>${esc(m)}</p><div class="row"><button class="btn d" id="ay">تأكيد</button><button class="btn" id="an">إلغاء</button></div></div>`;d.hidden=false;$("#ay").onclick=()=>{d.hidden=true;r(true)};$("#an").onclick=()=>{d.hidden=true;r(false)}});
+const AH={enter:(x,y,b)=>enter(b),t:x=>{tab=x;ed=null;aview()},
+nc:()=>{const c={id:rid(6),title:"كورس جديد",grade:GR[0],price:100,desc:"",lessons:[],codes:[]};SRC.courses.push(c);sel=c.id;aview()},
+saveC:()=>{Object.assign(cur(),{title:v("ct"),grade:v("cg"),price:+v("cp")||0,desc:v("cd")});toast("تم الحفظ محليًا");aview()},
+delC:async()=>{if(await ask("حذف الكورس بكل دروسه وأكواده؟")){cur().lessons.forEach(trash);SRC.courses=SRC.courses.filter(c=>c.id!=sel);sel="";ed=null;aview()}},
+saveL:()=>{const c=cur(),q=parseQ(v("lq"));if(!v("lt").trim())return toast("اكتب عنوان الدرس");if(q.err.length)return toast("خطأ في الأسئلة، السطور: "+q.err.join("، "));
+const old=ed!=null?c.lessons[ed]:{},id=old.id||rid(6),l={...old,id,title:v("lt").trim(),unit:v("lu").trim(),video:v("lv").trim(),pdf:old.pdf||"",free:$("#lf").checked,quiz:v("lq")},fv=$("#lvf").files[0],fp=$("#lpf").files[0];
+if(fv&&fv.size>50*1048576)return toast("الفيديو أكبر من 50 ميجا. اضغطه أو استخدم رابط يوتيوب");if(fp&&fp.size>50*1048576)return toast("الملف أكبر من 50 ميجا");
+if($("#lrv")&&$("#lrv").checked){if(l.vf)SRC.trash.push(l.vf);l.vf="";l.vn=""}if($("#lrp")&&$("#lrp").checked){if(l.pf)SRC.trash.push(l.pf);l.pf="";l.pn=""}
+if(fv){pend[id]={...(pend[id]||{}),v:fv};l.vn=fv.name}if(fp){pend[id]={...(pend[id]||{}),p:fp};l.pn=fp.name}
+ed!=null?c.lessons[ed]=l:c.lessons.push(l);ed=null;toast("تم الحفظ محليًا. اذهب إلى «النشر» لرفعه");aview()},
+canL:()=>{ed=null;aview()},edL:i=>{ed=+i;aview();scrollTo(0,300)},
+delL:async i=>{if(await ask("حذف الدرس؟")){const L=cur().lessons;trash(L[+i]);delete pend[L[+i].id];L.splice(+i,1);aview()}},
+mv:(i,d)=>{const L=cur().lessons,j=+i+ +d;if(!L[j])return;[L[i],L[j]]=[L[j],L[i]];aview()},
+gen:()=>{const c=cur(),n=Math.min(50,+v("kn")||1),b=v("kl").trim();c.codes=c.codes||[];for(let i=0;i<n;i++){let id;do id=rid(4);while(c.codes.some(k=>k.id==id));c.codes.push({id,secret:rid(8),label:n>1?`${b} ${i+1}`.trim():b,at:Date.now()})}aview()},
+cpk:async i=>{const c=cur(),k=c.codes[+i],m=`كود تفعيل كورس «${c.title}»:\n${k.id}-${k.secret}\nاكتبه في خانة التفعيل داخل صفحة الكورس.`;try{await navigator.clipboard.writeText(m);toast("تم النسخ")}catch(e){toast(m)}},
+rmk:i=>{cur().codes.splice(+i,1);aview()},
+saveS:()=>{Object.assign(SRC.settings,{name:v("sn"),tag:v("st"),pay:v("sp"),wa:v("sw"),legal:{terms:v("s1"),privacy:v("s2"),refund:v("s3")}});toast("تم الحفظ محليًا");aview()},
+pub:async(x,y,b)=>{b.disabled=true;try{await publish()}catch(e){toast(e.message);$("#plog").textContent="توقف النشر: "+e.message}b.disabled=false},
+out:()=>{SRC=null;adminOn=false;GH={o:"",r:"",t:""};PW="";nav();home()}};
+const H={g:x=>{grade=x;home()},c:x=>course(x),l:(x,y)=>lesson(x,y),h:home,r:results,cp:copyNum,act:x=>activate(x),sub:(x,y)=>submit(x,y),pv:(x,y)=>playV(x,y),pp:(x,y)=>openP(x,y),adm:()=>aview()};
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const[a,x,y]=b.dataset.a.split("|");if(["g","c","l","h","r","adm","t"].includes(a))scrollTo(0,0);if(H[a])H[a](x,y);else if(AH[a])AH[a](x,y,b)});
+document.addEventListener("keydown",e=>{if(e.key=="Enter"&&$("#ap")&&document.activeElement.id=="ap2")enter($("[data-a=enter]"))});
+document.querySelectorAll("[data-leg]").forEach(a=>a.onclick=()=>{const m=$("#modal");m.innerHTML=`<div class="card"><h3>${a.textContent}</h3><p>${esc((ST.legal||{})[a.dataset.leg]||"")}</p><button class="btn p" id="mc">إغلاق</button></div>`;m.hidden=false;$("#mc").onclick=()=>m.hidden=true});
+$("#adl").onclick=()=>{adminOn&&SRC?aview():loginView()};
+(async()=>{try{const r=await fetch("data.json?t="+Math.floor(Date.now()/60000));D=await r.json();ST=D.settings||{};brand();nav();home();for(const c of D.courses)if(codes[c.id])await unlock(c,codes[c.id]);home()}catch(e){app.innerHTML=`<div class="card"><h3>تعذّر تحميل البيانات</h3><p class="muted">تأكد أن ملف data.json موجود بجانب index.html.</p></div>`}})();
+</script>
+</body>
+</html>
