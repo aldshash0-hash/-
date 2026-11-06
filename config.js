@@ -1,2 +1,2 @@
-https://script.google.com/macros/s/AKfycbyKi8s64lNMrxirD9hfwLgcl-3Qp1ySsslNp7RAKyRtk-TSAhAdD5uqxRlU5ZSzEMMr/exec
+https://script.google.com/macros/s/AKfycbwZGNaNytgew7qGauIOLnFMBcdmrkwyGVzqWEvCiz5OfZCWTSVOyca8QhPST91u301X/exec
 window.AK_API = "";
