@@ -49,7 +49,7 @@ function load_() {
   let db = {};
   try { db = JSON.parse(dbfile_().getBlob().getDataAsString() || '{}'); } catch (e) { db = {}; }
   if (!db.courses) {
-    db = { settings: { name: 'العكريشي', tag: 'لغةُ الضّاد… نتعلّمها بحبّ', pay: '01151045032', wa: '201151045032',
+    db = { settings: { name: 'العكريشي', tag: 'يَا نفسُ عِيشي مَع العَكريشي', pay: '01151045032', wa: '201151045032',
       legal: { terms: 'للاستخدام الشخصي فقط ويُمنع تسجيل الدروس أو مشاركة كود التفعيل. [عدّل النص]', privacy: 'نحفظ بيانات الموقع في حساب Google الخاص بالمدير ولا نبيعها. [عدّل النص]', refund: '[اكتب سياسة الاسترجاع]' } },
       courses: [] };
     save_(db);
